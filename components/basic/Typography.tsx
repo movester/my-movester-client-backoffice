@@ -18,12 +18,20 @@ const variantsProperties: {
     fontSize: 16,
     fontWeight: 800,
   },
+  heading3: {
+    fontSize: 12,
+    fontWeight: 800,
+  },
   body1: {
     fontSize: 16,
     fontWeight: 500,
   },
   body2: {
     fontSize: 12,
+    fontWeight: 500,
+  },
+  body3: {
+    fontSize: 8,
     fontWeight: 500,
   },
   caption: {

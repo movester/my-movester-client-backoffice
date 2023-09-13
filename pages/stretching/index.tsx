@@ -169,6 +169,13 @@ const StrechingPage = () => {
             <Table>
               <TableGrid>
                 <TableItem>
+                  <Box display="flex" justifyContent="center" width={"100%"}>
+                    <Typography variants="body1" color={colors.g300}>
+                      ID
+                    </Typography>
+                  </Box>
+                </TableItem>
+                <TableItem>
                   <Typography variants="body1" color={colors.g300}>
                     제목
                   </Typography>
@@ -184,9 +191,11 @@ const StrechingPage = () => {
                   </Typography>
                 </TableItem>
                 <TableItem>
-                  <Typography variants="body1" color={colors.g300}>
-                    조회수
-                  </Typography>
+                  <Box display="flex" justifyContent="center" width={"100%"}>
+                    <Typography variants="body1" color={colors.g300}>
+                      조회수
+                    </Typography>
+                  </Box>
                 </TableItem>
                 <TableItem>
                   <Typography variants="body1" color={colors.g300}>
@@ -206,6 +215,15 @@ const StrechingPage = () => {
                           })
                         }
                       >
+                        <TableItem>
+                          <Box
+                            display="flex"
+                            justifyContent="center"
+                            width={"100%"}
+                          >
+                            <Typography variants="body1">{list.id}</Typography>
+                          </Box>
+                        </TableItem>
                         <TableItem>
                           <Typography variants="heading2">
                             {list.title}
@@ -266,7 +284,7 @@ const PageWrapper = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  padding: 16px;
+  padding: 16px 16px 64px 16px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -305,7 +323,7 @@ const TableGrid = styled.div`
   gap: 1px;
   display: grid;
   grid-template-columns:
-    minmax(360px, 9fr) minmax(200px, 5fr) minmax(280px, 7fr)
+    minmax(60px, 1.5fr) minmax(360px, 9fr) minmax(200px, 5fr) minmax(280px, 7fr)
     minmax(80px, 2fr) minmax(120px, 3fr);
   align-items: end;
 `;

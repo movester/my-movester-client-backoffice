@@ -1,10 +1,8 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.html",
-  "/stretching/detail": "pages/stretching/detail.html",
-  "/stretching": "pages/stretching.html",
-  "/stretching/post": "pages/stretching/post.html",
-  "/404": "pages/404.html"
+  "/_error": "pages/_error.js",
+  "/stretching": "pages/stretching.js",
+  "/stretching/post": "pages/stretching/post.js",
+  "/stretching/detail": "pages/stretching/detail.js"
 }
