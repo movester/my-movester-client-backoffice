@@ -20,12 +20,20 @@ const variantsProperties = {
     fontSize: 16,
     fontWeight: 800
   },
+  heading3: {
+    fontSize: 12,
+    fontWeight: 800
+  },
   body1: {
     fontSize: 16,
     fontWeight: 500
   },
   body2: {
     fontSize: 12,
+    fontWeight: 500
+  },
+  body3: {
+    fontSize: 8,
     fontWeight: 500
   },
   caption: {
@@ -119,6 +127,7 @@ const colors = {
   r000: " #f64f59",
   softPrimaryColor: "#6D66AA",
   vividPrimaryColor: "#2A1598",
+  f300: "#f7f7f7",
   f200: "#f2f2f2",
   f100: "#fafafa",
   f000: "#ffffff",

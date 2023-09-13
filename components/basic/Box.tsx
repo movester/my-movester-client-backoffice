@@ -15,6 +15,7 @@ interface IProps {
   border?: string;
   borderRadius?: number;
   gridTemplateColumns?: string;
+  boxSahdow?: string;
   onClick?: () => void;
   onMouseOver?: () => void;
   ref?: any;
@@ -34,6 +35,7 @@ interface IBox {
   $border?: string;
   $borderRadius?: number;
   $gridTemplateColumns?: string;
+  $boxSahdow?: string;
 }
 
 const Box = (props: PropsWithChildren<IProps>) => {
@@ -55,7 +57,9 @@ const Box = (props: PropsWithChildren<IProps>) => {
     onMouseOver,
     gridTemplateColumns,
     ref,
+    boxSahdow,
   } = props;
+
   return (
     <BoxWrapper
       $flexDirection={flexDirection}
@@ -71,6 +75,7 @@ const Box = (props: PropsWithChildren<IProps>) => {
       $border={border}
       $borderRadius={borderRadius}
       $gridTemplateColumns={gridTemplateColumns}
+      $boxSahdow={boxSahdow}
       onClick={onClick}
       onMouseOver={onMouseOver}
       ref={ref}
@@ -99,4 +104,6 @@ const BoxWrapper = styled.div<IBox>`
   border: ${({ $border }) => $border};
   border-radius: ${({ $borderRadius }) => `${$borderRadius}px`};
   grid-template-columns: ${({ $gridTemplateColumns }) => $gridTemplateColumns};
+  box-shadow: ${({ $boxSahdow }) => $boxSahdow};
+  word-break: break-all;
 `;

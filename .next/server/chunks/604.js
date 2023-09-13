@@ -33,7 +33,8 @@ const Box = props => {
     onClick,
     onMouseOver,
     gridTemplateColumns,
-    ref
+    ref,
+    boxSahdow
   } = props;
   return /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx(BoxWrapper, {
     $flexDirection: flexDirection,
@@ -49,6 +50,7 @@ const Box = props => {
     $border: border,
     $borderRadius: borderRadius,
     $gridTemplateColumns: gridTemplateColumns,
+    $boxSahdow: boxSahdow,
     onClick: onClick,
     onMouseOver: onMouseOver,
     ref: ref,
@@ -60,7 +62,7 @@ const Box = props => {
 const BoxWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__.styled.div.withConfig({
   displayName: "Box__BoxWrapper",
   componentId: "sc-uofllt-0"
-})(["width:", ";height:", ";display:", ";flex-direction:", ";justify-content:", ";align-items:", ";padding:", ";gap:", ";overflow:", ";background-color:", ";border:", ";border-radius:", ";grid-template-columns:", ";"], ({
+})(["width:", ";height:", ";display:", ";flex-direction:", ";justify-content:", ";align-items:", ";padding:", ";gap:", ";overflow:", ";background-color:", ";border:", ";border-radius:", ";grid-template-columns:", ";box-shadow:", ";word-break:break-all;"], ({
   $width
 }) => typeof $width === "string" ? $width : `${$width}px `, ({
   $height
@@ -86,7 +88,9 @@ const BoxWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__.styled.div.wit
   $borderRadius
 }) => `${$borderRadius}px`, ({
   $gridTemplateColumns
-}) => $gridTemplateColumns);
+}) => $gridTemplateColumns, ({
+  $boxSahdow
+}) => $boxSahdow);
 
 /***/ }),
 

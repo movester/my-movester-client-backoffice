@@ -18,6 +18,7 @@ import {
   STRETCHING_MAIN_CATEGORY_TEXT,
   STRETCHING_SUB_CATEGORY_TEXT,
 } from "../constants/text";
+import Chip from "../components/basic/Chip";
 
 export interface IDetailData {
   adminId: string | null;
@@ -47,41 +48,45 @@ const StretchingDetailView = (props: IProps) => {
     <Box
       display="flex"
       flexDirection="column"
-      gap={56}
-      padding={32}
+      gap={32}
+      padding={"32px 32px 64px 32px"}
       height={"100%"}
+      width={"100%"}
     >
-      <Typography variants="heading1">{data.title}</Typography>
-      <Divider></Divider>
-      {/* 부위 */}
-      <Box>
-        <Typography variants="heading2">부위</Typography>
-        <Box display="flex" justifyContent="start" alignItems="center">
-          <Typography variants="body1">
-            {STRETCHING_MAIN_CATEGORY_TEXT[data.mainCategory]}
-          </Typography>
-          <Typography variants="body1">
-            {STRETCHING_SUB_CATEGORY_TEXT[data.subCategory]}
-          </Typography>
-        </Box>
-      </Box>
-      {/* 효과 */}
-      <Box>
-        <Typography variants="heading2">효과</Typography>
-        <Box display="flex" justifyContent="start" alignItems="center">
-          {data.effectList.map((item, idx) => (
-            <Typography variants="body1" key={`detail-effect-${item}-${idx}`}>
-              {STRETCHING_EFFECT_TEXT[item]},
-            </Typography>
-          ))}
-        </Box>
+      <Box display="flex" flexDirection="column" gap={16}>
+        <Typography variants="heading1">{data.title}</Typography>
+        <Divider></Divider>
       </Box>
       {/* 이미지 */}
       <Box display="grid" gridTemplateColumns="repeat(2,350px)" gap={16}>
         {data.imageList.map((imgLink, index) => (
-          <img key={`img-detail-${data.id}-${index}`} src={imgLink}></img>
+          <Box
+            backgroundColor={colors.f300}
+            key={`img-detail-${data.id}-${index}`}
+          >
+            <img src={imgLink}></img>
+          </Box>
         ))}
       </Box>
+      {/* 부위 */}
+      <Box display="flex" flexDirection="column" gap={12}>
+        <Typography variants="heading2">타겟 부위</Typography>
+        <Box display="flex" justifyContent="start" alignItems="center">
+          <Chip>{STRETCHING_SUB_CATEGORY_TEXT[data.subCategory]}</Chip>
+        </Box>
+      </Box>
+      {/* 효과 */}
+      <Box display="flex" flexDirection="column" gap={12}>
+        <Typography variants="heading2">기대 효과</Typography>
+        <Box display="flex" justifyContent="start" alignItems="center" gap={8}>
+          {data.effectList.map((item, idx) => (
+            <Chip variants="secondary" key={`detail-effect-${item}-${idx}`}>
+              {STRETCHING_EFFECT_TEXT[item]}
+            </Chip>
+          ))}
+        </Box>
+      </Box>
+
       {/* 스트레칭 방법 및 순서 */}
       <Box
         display="flex"
@@ -90,7 +95,7 @@ const StretchingDetailView = (props: IProps) => {
         justifyContent="start"
         gap={16}
       >
-        <Typography variants="heading2">스트레칭 방법 및 순서</Typography>
+        <Typography variants="heading2">🧘🏻‍♀️ 스트레칭 방법 및 순서</Typography>
 
         <Box
           display="flex"
@@ -105,7 +110,10 @@ const StretchingDetailView = (props: IProps) => {
           gap={1}
         >
           {data.techniqueList.map((list, index) => (
-            <ListTableItem key={`technique-list-${list}`} order={index + 1}>
+            <ListTableItem
+              key={`technique-list-${list}-${index}`}
+              order={index + 1}
+            >
               <Typography variants="body1">{list}</Typography>
             </ListTableItem>
           ))}
@@ -116,7 +124,7 @@ const StretchingDetailView = (props: IProps) => {
           <Typography variants="heading2">✨ 권장 횟수</Typography>
           <Typography variants="body1">는 </Typography>
           <Typography variants="heading1">
-            {data.collect}회 {data.set}세트
+            {`${data.collect}회 ${data.set}세트`}
           </Typography>
           <Typography variants="body1">입니다.</Typography>
         </Box>
@@ -130,7 +138,7 @@ const StretchingDetailView = (props: IProps) => {
           justifyContent="start"
           gap={16}
         >
-          <Typography variants="heading2">주의 사항</Typography>
+          <Typography variants="heading2">⛔️ 주의 사항</Typography>
 
           <Box
             display="flex"
@@ -162,7 +170,7 @@ const StretchingDetailView = (props: IProps) => {
           gap={16}
           height={"auto"}
         >
-          <Typography variants="heading2">참고영상</Typography>
+          <Typography variants="heading2">📺 참고영상</Typography>
           <Box display="flex" justifyContent="center" width={"100%"}>
             <iframe
               width={550}

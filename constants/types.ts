@@ -2,6 +2,7 @@ export type colorsType =
   | "r000"
   | "softPrimaryColor"
   | "vividPrimaryColor"
+  | "f300"
   | "f200"
   | "f100"
   | "f000"
@@ -17,8 +18,10 @@ export type variantsType = "primary" | "secondary";
 export type typographyType =
   | "heading1"
   | "heading2"
+  | "heading3"
   | "body1"
   | "body2"
+  | "body3"
   | "caption";
 
 export type StretchingMainCategoryType = "UPPER_BODY" | "LOWER_BODY";

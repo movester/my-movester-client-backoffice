@@ -8,6 +8,7 @@ export const colors: IColors = {
   r000: " #f64f59",
   softPrimaryColor: "#6D66AA",
   vividPrimaryColor: "#2A1598",
+  f300: "#f7f7f7",
   f200: "#f2f2f2",
   f100: "#fafafa",
   f000: "#ffffff",
