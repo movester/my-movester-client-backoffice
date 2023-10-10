@@ -323,7 +323,7 @@ const TableGrid = styled.div`
   gap: 1px;
   display: grid;
   grid-template-columns:
-    minmax(60px, 1.5fr) minmax(360px, 9fr) minmax(200px, 5fr) minmax(280px, 7fr)
+    minmax(80px, 2fr) minmax(360px, 9fr) minmax(200px, 5fr) minmax(280px, 7fr)
     minmax(80px, 2fr) minmax(120px, 3fr);
   align-items: end;
 `;
