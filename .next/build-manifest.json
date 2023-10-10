@@ -26,6 +26,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/stretching.js"
+    ],
+    "/stretching/detail": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/stretching/detail.js"
     ]
   },
   "ampFirstPages": []
