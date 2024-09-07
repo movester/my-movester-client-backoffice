@@ -1,9 +1,9 @@
 {
   "/_app": "pages/_app.js",
-  "/": "pages/index.html",
-  "/stretching/detail": "pages/stretching/detail.html",
   "/_document": "pages/_document.js",
+  "/": "pages/index.html",
   "/stretching": "pages/stretching.html",
+  "/stretching/detail": "pages/stretching/detail.html",
   "/stretching/post": "pages/stretching/post.html",
   "/_error": "pages/_error.js",
   "/404": "pages/404.html"
