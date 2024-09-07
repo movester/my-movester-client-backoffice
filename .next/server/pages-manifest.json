@@ -1,8 +1,8 @@
 {
   "/_app": "pages/_app.js",
   "/": "pages/index.html",
-  "/_document": "pages/_document.js",
   "/stretching/detail": "pages/stretching/detail.html",
+  "/_document": "pages/_document.js",
   "/stretching": "pages/stretching.html",
   "/stretching/post": "pages/stretching/post.html",
   "/_error": "pages/_error.js",
